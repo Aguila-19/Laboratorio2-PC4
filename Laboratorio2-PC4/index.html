@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eventos Chidos - Laboratorio</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<header class="top">
+  <h1>Eventos Chidos (HTML + CSS + JS)</h1>
+  <p>Incluye: mousemove, wheel, click, mouseleave, keydown, submit + extras.</p>
+</header>
+
+<main class="grid">
+
+  <!-- 1) CLICK -->
+  <section class="card" id="cardClick">
+    <h2>EVENTO: click</h2>
+    <p class="hint">Click para cambiar el gradiente y contar clicks.</p>
+    <button class="btn" id="btnClick">Click aquí</button>
+    <p class="result" id="resClick">Clicks: 0</p>
+  </section>
+
+  <!-- 2) MOUSEMOVE -->
+  <section class="card" id="cardMove">
+    <h2>EVENTO: mousemove</h2>
+    <p class="hint">Mueve el mouse aquí: se muestra coordenada + “radar” visual.</p>
+    <div class="pad" id="padMove">
+      <div class="dot" id="dot"></div>
+    </div>
+    <p class="result" id="resMove">X: 0 | Y: 0</p>
+  </section>
+
+  <!-- 3) WHEEL -->
+  <section class="card" id="cardWheel">
+    <h2>EVENTO: wheel</h2>
+    <p class="hint">Ruedita del mouse: sube/baja “zoom” del emoji.</p>
+    <div class="emoji" id="emoji">🔥</div>
+    <p class="result" id="resWheel">Zoom: 100%</p>
+  </section>
+
+  <!-- 4) MOUSELEAVE -->
+  <section class="card" id="cardLeave">
+    <h2>EVENTO: mouseleave</h2>
+    <p class="hint">Sal de la tarjeta para “auto-guardar” un mensaje.</p>
+    <textarea class="input" id="note" rows="3" placeholder="Escribe una nota rápida..."></textarea>
+    <p class="result" id="resLeave">Estado: sin guardar</p>
+  </section>
+
+  <!-- 5) KEYDOWN -->
+  <section class="card" id="cardKey">
+    <h2>EVENTO: keydown</h2>
+    <p class="hint">Escribe. Detecta tecla y activa “modo turbo” con Shift.</p>
+    <input class="input" id="keyBox" placeholder="Escribe aquí..." />
+    <p class="result" id="resKey">Tecla: (ninguna) | Turbo: OFF</p>
+  </section>
+
+  <!-- 6) SUBMIT -->
+  <section class="card" id="cardSubmit">
+    <h2>EVENTO: submit</h2>
+    <p class="hint">Formulario: valida email + muestra “toast” bonito.</p>
+
+    <form id="form" class="form">
+      <input class="input" id="email" type="email" placeholder="tucorreo@algo.com"/>
+      <button class="btn" type="submit">Enviar</button>
+    </form>
+
+    <p class="result" id="resSubmit">Resultado: esperando envío...</p>
+    <div class="toast" id="toast"> Enviado correctamente :D</div>
+  </section>
+
+  <!-- 7) DBLCLICK (extra) -->
+  <section class="card" id="cardDbl">
+    <h2>EVENTO: dblclick</h2>
+    <p class="hint">Doble click para “fijar” el color (modo candado).</p>
+    <button class="btn" id="btnLock">Doble click aquí</button>
+    <p class="result" id="resDbl">Candado: OFF</p>
+  </section>
+
+  <!-- 8) INPUT (extra) -->
+  <section class="card" id="cardInput">
+    <h2>EVENTO: input</h2>
+    <p class="hint">Barra de energía en vivo (0-100).</p>
+    <input id="range" type="range" min="0" max="100" value="55"/>
+    <div class="bar">
+      <div class="barFill" id="barFill"></div>
+    </div>
+    <p class="result" id="resInput">Energía: 55%</p>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <small>Hecho con listeners (addEventListener) </small>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

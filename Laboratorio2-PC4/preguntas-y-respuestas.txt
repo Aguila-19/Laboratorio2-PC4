@@ -1,0 +1,17 @@
+
+1) ¿Utilizó listeners para sus eventos o los describió como propiedades de los elementos? 
+Justifique.
+
+Usé listeners con addEventListener porque permiten separar el HTML del JavaScript, 
+tambien mantiene el código más ordenado y además agregar varios eventos al mismo elemento
+sin sobreescribir nada. También facilita reutilizar funciones y mantener el proyecto más 
+profesional.
+
+2) Seleccione uno de sus eventos y explique por qué era la mejor elección y qué otro podría haber utilizado.
+
+Elegí el evento mousemove porque necesito capturar la posición del mouse en tiempo real para mover 
+el punto “radar” y actualizar las coordenadas X/Y al instante.
+Otro evento que se podría usar es mouseenter, 
+pero ese solo detecta cuando el mouse entra una vez, no sirve para seguimiento 
+continuo como mousemove.
+
